@@ -8,7 +8,7 @@ before_install:
   - docker build -t sandysiz/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true sandipbose/react-test npm test
+  - docker run -e CI=true sandysiz/react-test npm test
 
 after_success:
   - docker build -t sandysiz/multi-client ./client
